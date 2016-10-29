@@ -51,22 +51,22 @@ hi! link ModeMsg       MoreMsg
 hi! link TabLineFill   StatusLineNC
 hi! link SpecialKey    NonText
 
-hi Delimiter       ctermfg=7
+hi Delimiter       ctermfg=none
 hi Comment         ctermfg=8
 hi Underlined      ctermfg=4   cterm=underline
 hi Type            ctermfg=4
-hi String          ctermfg=1
-hi Keyword         ctermfg=2
-hi Todo            ctermfg=15  ctermbg=NONE     cterm=bold,underline
+hi String          ctermfg=12
+hi Keyword         ctermfg=1
+hi Todo            ctermfg=15  ctermbg=NONE     cterm=bold
 hi Function        ctermfg=4
 hi Identifier      ctermfg=7   cterm=NONE
-hi Statement       ctermfg=9   cterm=bold
-hi Constant        ctermfg=1
+hi Statement       ctermfg=1
+hi Constant        ctermfg=7
 hi Number          ctermfg=12
-hi Boolean         ctermfg=4
-hi Special         ctermfg=13
+hi Boolean         ctermfg=12
+hi Special         ctermfg=7
 hi Ignore          ctermfg=0
-hi! link Operator  Delimiter
+hi Operator        ctermfg=1
 hi! link PreProc   Delimiter
 hi! link Error     ErrorMsg
 
@@ -247,3 +247,5 @@ hi coffeeSpecialOp    ctermfg=none
 hi cjsxAttribProperty ctermfg=4
 
 hi yamlConstant ctermfg=12
+
+hi zshCommands ctermfg=1

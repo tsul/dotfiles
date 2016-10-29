@@ -6,11 +6,12 @@ rm -rf ~/.vim \
        ~/.zprofile \
        ~/.zpreztorc \
        ~/.gitconfig \
-       ~/.config/mpv/mpv.conf \
+       ~/.config/mpv/mpv.conf
 
 # zsh
 
-ln -s ~/dotfiles/zsh/zshrc ~/.zshrc
+ln -s ~/dotfiles/zshrc ~/.zshrc
+ln -s ~/dotfiles/zprofile ~/.zprofile
 
 # vim
 
@@ -23,9 +24,8 @@ ln -s ~/dotfiles/gitconfig ~/.gitconfig
 
 # prezto
 
-ln -s ~/dotfiles/zsh/zprofile ~/.zprofile
-ln -s ~/dotfiles/zsh/zpreztorc ~/.zpreztorc
-ln -s ~/dotfiles/zsh/prompt_water_setup ~/.zprezto/modules/prompt/functions/prompt_water_setup
+ln -s ~/dotfiles/prezto/zpreztorc ~/.zpreztorc
+ln -s ~/dotfiles/prezto/prompt_water_setup ~/.zprezto/modules/prompt/functions/prompt_water_setup
 
 # mpv
 

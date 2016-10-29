@@ -1,6 +1,22 @@
 #!/bin/sh
 
-rm -rf ~/.vim
+rm -rf ~/.vim \
+       ~/.vimrc \
+       ~/.zshrc \
+       ~/.zprofile \
+       ~/.zpreztorc
 
-ls -n ~/dotfiles/vim ~/.vim
-ls -n ~/dotfiles/vim/vimrc ~/.vimrc
+# zsh
+
+ln -s ~/dotfiles/zsh/zshrc ~/.zshrc
+
+# vim
+
+ln -s ~/dotfiles/vim ~/.vim
+ln -s ~/dotfiles/vim/vimrc ~/.vimrc
+
+# prezto
+
+ln -s ~/dotfiles/zsh/zprofile ~/.zprofile
+ln -s ~/dotfiles/zsh/zpreztorc ~/.zpreztorc
+ln -s ~/dotfiles/zsh/prompt_water_setup ~/.zprezto/modules/prompt/functions/prompt_water_setup

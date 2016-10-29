@@ -203,6 +203,13 @@ hi! link vimHiAttrib  Constant
 
 hi! link NERDTreeHelp      Comment
 hi! link NERDTreeExecFile  String
+hi NERDTreeDir ctermfg=4
+hi NERDTreeFile ctermfg=none
+hi NERDTreeCWD ctermfg=5
+hi NERDTreeUp ctermfg=8
+hi NERDTreeClosable ctermfg=12
+hi NERDTreeOpenable ctermfg=12
+hi NERDTreeDirSlash ctermfg=4
 
 hi! link helpExample         String
 hi! link helpHeadline        Title
@@ -238,5 +245,3 @@ hi coffeeSpecialOp    ctermfg=none
 hi cjsxAttribProperty ctermfg=4
 
 hi yamlConstant ctermfg=12
-
-" vim: fdm=marker:sw=2:sts=2:et

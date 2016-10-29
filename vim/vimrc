@@ -21,7 +21,6 @@ Plugin 'kern/vim-es7'                           " Up-to-date (ES6+) syntax
 Plugin 'scrooloose/syntastic'                   " Linting
 Plugin 'mtscout6/syntastic-local-eslint.vim'    " Use local eslint
 Plugin 'othree/javascript-libraries-syntax.vim' " Highlighting for JS library calls
-Plugin 'airblade/vim-gitgutter'                 " Show git diff in gutter
 Plugin 'mkitt/tabline.vim'                      " Temporary, until I write my own tabline
 
 call vundle#end()
@@ -199,7 +198,6 @@ set statusline=\
 
 set statusline+=%{LimitPathLength(expand('%f'),60)}\ 
 set statusline+=%7*
-" set statusline+=%([%{GitStatus()}]\ %)
 set statusline+=%(%h%m%r%w\ %)
 set statusline+=(
 set statusline+=%(%{&ft}%)

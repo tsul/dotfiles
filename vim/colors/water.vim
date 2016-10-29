@@ -10,27 +10,27 @@ endif
 let colors_name="water"
 
 hi Cursor              ctermfg=7     ctermbg=1
-hi CursorLine          ctermbg=0     cterm=NONE
-hi MatchParen          ctermfg=7     ctermbg=NONE  cterm=underline
+hi CursorLine          ctermbg=0     cterm=none
+hi MatchParen          ctermfg=7     ctermbg=none  cterm=underline
 hi Pmenu               ctermfg=15    ctermbg=0
 hi PmenuThumb          ctermbg=7
 hi PmenuSBar           ctermbg=8
 hi PmenuSel            ctermfg=0     ctermbg=4
 hi ColorColumn         ctermbg=0
-hi SpellBad            ctermfg=1     ctermbg=NONE  cterm=underline
-hi SpellCap            ctermfg=10    ctermbg=NONE  cterm=underline
-hi SpellRare           ctermfg=11    ctermbg=NONE  cterm=underline
-hi SpellLocal          ctermfg=13    ctermbg=NONE  cterm=underline
+hi SpellBad            ctermfg=1     ctermbg=none  cterm=underline
+hi SpellCap            ctermfg=10    ctermbg=none  cterm=underline
+hi SpellRare           ctermfg=11    ctermbg=none  cterm=underline
+hi SpellLocal          ctermfg=13    ctermbg=none  cterm=underline
 hi NonText             ctermfg=8
-hi LineNr              ctermfg=8     ctermbg=NONE
+hi LineNr              ctermfg=8     ctermbg=none
 hi CursorLineNr        ctermfg=11    ctermbg=0
 hi Visual              ctermfg=0     ctermbg=12
-hi IncSearch           ctermfg=0     ctermbg=13    cterm=NONE
+hi IncSearch           ctermfg=0     ctermbg=13    cterm=none
 hi Search              ctermfg=0     ctermbg=10
 hi StatusLine          ctermfg=7     ctermbg=0     cterm=bold
 hi StatusLineNC        ctermfg=8     ctermbg=0     cterm=bold
-hi VertSplit           ctermfg=0     ctermbg=0     cterm=NONE
-hi TabLine             ctermfg=8     ctermbg=0     cterm=NONE
+hi VertSplit           ctermfg=0     ctermbg=0     cterm=none
+hi TabLine             ctermfg=8     ctermbg=0     cterm=none
 hi TabLineSel          ctermfg=7     ctermbg=0
 hi Folded              ctermfg=3     ctermbg=0
 hi Directory           ctermfg=12
@@ -51,22 +51,22 @@ hi! link ModeMsg       MoreMsg
 hi! link TabLineFill   StatusLineNC
 hi! link SpecialKey    NonText
 
-hi Delimiter       ctermfg=7
+hi Delimiter       ctermfg=none
 hi Comment         ctermfg=8
 hi Underlined      ctermfg=4   cterm=underline
 hi Type            ctermfg=4
-hi String          ctermfg=1
-hi Keyword         ctermfg=2
-hi Todo            ctermfg=15  ctermbg=NONE     cterm=bold,underline
+hi String          ctermfg=12
+hi Keyword         ctermfg=1
+hi Todo            ctermfg=15  ctermbg=none     cterm=bold
 hi Function        ctermfg=4
-hi Identifier      ctermfg=7   cterm=NONE
-hi Statement       ctermfg=9   cterm=bold
-hi Constant        ctermfg=1
+hi Identifier      ctermfg=7   cterm=none
+hi Statement       ctermfg=1
+hi Constant        ctermfg=7
 hi Number          ctermfg=12
-hi Boolean         ctermfg=4
-hi Special         ctermfg=13
+hi Boolean         ctermfg=12
+hi Special         ctermfg=7
 hi Ignore          ctermfg=0
-hi! link Operator  Delimiter
+hi Operator        ctermfg=1
 hi! link PreProc   Delimiter
 hi! link Error     ErrorMsg
 
@@ -84,17 +84,17 @@ hi htmlBoldUnderlineItalic  cterm=bold,underline
 hi! link htmlLink           Underlined
 hi! link htmlEndTag         htmlTag
 
-hi xmlTagName       ctermfg=4  cterm=NONE
-hi xmlTag           ctermfg=4  cterm=NONE
-hi xmlEntity        ctermfg=15 cterm=NONE
-hi xmlAttrib        ctermfg=4  cterm=NONE
-hi xmlEntityPunct   ctermfg=15  cterm=NONE
+hi xmlTagName       ctermfg=4  cterm=none
+hi xmlTag           ctermfg=4  cterm=none
+hi xmlEntity        ctermfg=15 cterm=none
+hi xmlAttrib        ctermfg=4  cterm=none
+hi xmlEntityPunct   ctermfg=15  cterm=none
 hi xmlString        ctermfg=12
 hi! link xmlEndTag  xmlTag
 hi! link xmlEqual   xmlAttrib
 
 
-hi javascriptTemplateSubstitution ctermfg=NONE
+hi javascriptTemplateSubstitution ctermfg=none
 hi javascriptImport ctermfg=1
 hi javascriptImportDef ctermfg=4
 hi javascriptExport ctermfg=1
@@ -109,15 +109,14 @@ hi javascriptTemplate ctermfg=12
 hi javascriptVariable ctermfg=1
 hi javascriptArrowFunc ctermfg=1
 hi javascriptIdentifierName ctermfg=7
-hi javascriptObjectLabel ctermfg=NONE
-hi javascriptBraces ctermfg=NONE
+hi javascriptObjectLabel ctermfg=none
 hi javascriptClassSuper ctermfg=7
 hi javascriptFunctionMethod ctermfg=4
 hi javascriptOpSymbol ctermfg=1
 hi javascriptOpSymbols ctermfg=1
 hi javascriptDOMEventTargetMethod ctermfg=7
 hi javascriptStringMethod ctermfg=7
-hi javascriptBOMHistoryProp ctermfg=NONE
+hi javascriptBOMHistoryProp ctermfg=none
 hi javascriptDOMElemProp ctermfg=7
 hi javascriptDOMDocProp ctermfg=7
 hi javascriptDOMStorageProp ctermfg=7
@@ -131,17 +130,17 @@ hi javascriptClassProperty ctermfg=7
 hi javascriptLogicSymbol ctermfg=1
 hi javascriptTemplateSB ctermfg=7
 hi javascriptPropertyName ctermfg=12
-hi javascriptEndColons ctermfg=NONE
+hi javascriptEndColons ctermfg=none
 hi javascriptMethodName ctermfg=4
 hi javascriptFuncName ctermfg=5
 hi javascriptReturn ctermfg=1
 hi javascriptConditional ctermfg=1
 hi javascriptConditionalElse ctermfg=1
-hi javascriptTemplateSubstitution ctermfg=NONE
+hi javascriptTemplateSubstitution ctermfg=none
 hi javascriptFuncKeyword ctermfg=1
-hi javascriptFuncArg ctermfg=NONE
+hi javascriptFuncArg ctermfg=none
 hi javascriptNull ctermfg=12
-hi javascriptBraces ctermfg=NONE
+hi javascriptBraces ctermfg=none
 hi javascriptBoolean ctermfg=12
 hi javascriptObjectLabel ctermfg=4
 hi javascriptLabel ctermfg=4
@@ -202,6 +201,7 @@ hi! link gitCommitDiscardedFile  gitCommitUnmergedFile
 hi! link vimSetSep    Delimiter
 hi! link vimContinue  Delimiter
 hi! link vimHiAttrib  Constant
+hi vimIsCommand ctermfg=1
 
 hi! link NERDTreeHelp      Comment
 hi! link NERDTreeExecFile  String
@@ -226,8 +226,8 @@ hi! link CtrlPLinePre  Comment
 hi shDerefSimple     ctermfg=11
 hi! link shDerefVar  shDerefSimple
 
-hi SyntasticWarningSign  ctermfg=3   ctermbg=NONE
-hi SyntasticErrorSign    ctermfg=1   ctermbg=NONE
+hi SyntasticWarningSign  ctermfg=3   ctermbg=none
+hi SyntasticErrorSign    ctermfg=1   ctermbg=none
 
 hi rustKeyword ctermfg=1
 
@@ -247,3 +247,5 @@ hi coffeeSpecialOp    ctermfg=none
 hi cjsxAttribProperty ctermfg=4
 
 hi yamlConstant ctermfg=12
+
+hi zshCommands ctermfg=1

@@ -11,7 +11,6 @@ Plugin 'tpope/vim-fugitive'                     " Git integration
 Plugin 'tpope/vim-sleuth'                       " Tab detection
 Plugin 'tpope/vim-commentary'                   " Comment things
 Plugin 'tpope/vim-surround'                     " Surround things
-Plugin 'sheerun/vim-polyglot'                   " Syntax highlighting for hella
 Plugin 'AndrewRadev/splitjoin.vim'              " Split/join one-liners
 Plugin 'godlygeek/tabular'                      " Align things
 Plugin 'rking/ag.vim'                           " Grep for things
@@ -20,16 +19,16 @@ Plugin 'ternjs/tern_for_vim'                    " Javascript code analysis
 Plugin 'kern/vim-es7'                           " Up-to-date (ES6+) syntax
 Plugin 'scrooloose/syntastic'                   " Linting
 Plugin 'mtscout6/syntastic-local-eslint.vim'    " Use local eslint
-Plugin 'othree/javascript-libraries-syntax.vim' " Highlighting for JS library calls
-Plugin 'mkitt/tabline.vim'                      " Temporary, until I write my own tabline
+Plugin 'mkitt/tabline.vim'                      " Tab titles with index
 
 call vundle#end()
 
 filetype on
 filetype plugin on
 filetype indent on
-syntax on
 
+syntax on
+set background=dark
 colorscheme water
 
 set autoindent
@@ -45,7 +44,6 @@ set ignorecase
 set smartcase
 set incsearch
 set hlsearch
-set background=dark
 set cursorline
 set mouse=a
 set shortmess+=c
@@ -111,8 +109,6 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_mode_map = { "mode": "passive", "active_filetypes": [], "passive_filetypes": [] }
 
-let g:used_javascript_libs = 'jquery,underscore,backbone,react,jasmine,handlebars,'
-
 " Matcher stuff
 
 let g:path_to_matcher = "/usr/local/bin/matcher"
@@ -141,28 +137,6 @@ function! GoodMatch(items, str, limit, mmode, ispath, crfile, regex)
 endfunction
 
 " Helper funcs for statusline
-
-function! GitBranch()
-  let l:branch = fugitive#head()
-
-  if len(l:branch)
-    return LimitPathLength(l:branch, 25)
-  endif
-
-  return ''
-endfunction
-
-function! GitStatus()
-  let l:branch = GitBranch()
-
-  if len(l:branch)
-    let l:status = system("[[ -n \"$(git status --porcelain ".shellescape(expand("%")).")\" ]] && 1")
-
-    return len(l:status) ? '✗' : '✓'
-  endif
-
-  return ''
-endfunction
 
 function! HighlightIdUnderCursor()
   let id = synIDattr(synID(line('.'), col('.'), 1), 'name')

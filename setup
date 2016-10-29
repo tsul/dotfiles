@@ -1,0 +1,6 @@
+#!/bin/sh
+
+rm -rf ~/.vim
+
+ls -n ~/dotfiles/vim ~/.vim
+ls -n ~/dotfiles/vim/vimrc ~/.vimrc

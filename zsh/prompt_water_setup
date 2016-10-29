@@ -18,13 +18,13 @@ function prompt_water_setup {
   zstyle ':prezto:module:git:info' verbose 'yes'
   zstyle ':prezto:module:git:info:dirty' format "%F{red} ✗%f"
   zstyle ':prezto:module:git:info:clean' format "%F{green} ✓%f"
-  zstyle ':prezto:module:git:info:branch' format "%b%f"
+  zstyle ':prezto:module:git:info:branch' format "%B%F{black}on %F{blue}%b%f"
   zstyle ':prezto:module:git:info:keys' format \
     'prompt' '' \
     'rprompt' '%b%C%D'
 
   PROMPT='%B%F{black}%2~ %F{blue}› %b%f'
-  RPROMPT='%B%F{black} on %F{blue}${git_info:+${(e)git_info[rprompt]}}%b%f'
+  RPROMPT='${git_info:+${(e)git_info[rprompt]}}%b%f'
 }
 
 prompt_water_setup "$@"

@@ -1,3 +1,5 @@
+" Adapted from noctu
+
 set background=dark
 hi! clear
 

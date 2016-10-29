@@ -5,6 +5,7 @@ rm -rf ~/.vim \
        ~/.zshrc \
        ~/.zprofile \
        ~/.zpreztorc \
+       ~/.zprezto/modules/prompt/functions/prompt_water_setup \
        ~/.gitconfig \
        ~/.config/mpv/mpv.conf
 

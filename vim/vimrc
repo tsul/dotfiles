@@ -11,6 +11,7 @@ Plugin 'tpope/vim-fugitive'                     " Git integration
 Plugin 'tpope/vim-sleuth'                       " Tab detection
 Plugin 'tpope/vim-commentary'                   " Comment things
 Plugin 'tpope/vim-surround'                     " Surround things
+Plugin 'sheerun/vim-polyglot'                   " Syntax highlighting for hella
 Plugin 'AndrewRadev/splitjoin.vim'              " Split/join one-liners
 Plugin 'godlygeek/tabular'                      " Align things
 Plugin 'rking/ag.vim'                           " Grep for things

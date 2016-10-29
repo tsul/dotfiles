@@ -156,6 +156,7 @@ hi javascriptForOperator ctermfg=1
 hi javascriptJSONStaticMethod ctermfg=7
 hi javascriptFileListMethod ctermfg=7
 hi javascriptDOMElemMethod ctermfg=7
+hi javascriptFuncComma ctermfg=none
 
 hi! link markdownHeadingRule        NonText
 hi! link markdownHeadingDelimiter   markdownHeadingRule

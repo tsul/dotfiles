@@ -156,6 +156,7 @@ hi javascriptForOperator ctermfg=1
 hi javascriptJSONStaticMethod ctermfg=7
 hi javascriptFileListMethod ctermfg=7
 hi javascriptDOMElemMethod ctermfg=7
+hi javascriptDOMDocMethod ctermfg=7
 hi javascriptFuncComma ctermfg=none
 
 hi! link markdownHeadingRule        NonText
@@ -246,7 +247,10 @@ hi coffeeStatement    ctermfg=1
 hi coffeejQuery       ctermfg=7
 hi coffeeSpecialOp    ctermfg=none
 hi cjsxAttribProperty ctermfg=4
+hi coffeeDotAccess    ctermfg=none
 
 hi yamlConstant ctermfg=12
 
 hi zshCommands ctermfg=1
+
+hi cssBraces ctermfg=none

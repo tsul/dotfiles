@@ -515,7 +515,7 @@
 	<key>NSWindow Frame iTerm Window 0</key>
 	<string>0 32 1438 846 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>0 6 1438 872 0 0 1440 878 </string>
+	<string>214 274 544 326 0 0 1440 878 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -1765,11 +1765,11 @@
 			<key>Name</key>
 			<string>Water</string>
 			<key>Non Ascii Font</key>
-			<string>Monaco 12</string>
+			<string>Monaco 14</string>
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>FantasqueSansMono-Regular 12</string>
+			<string>FantasqueSansMono-Regular 14</string>
 			<key>Option Key Sends</key>
 			<integer>0</integer>
 			<key>Prompt Before Closing 2</key>
@@ -1850,6 +1850,10 @@
 	<integer>1</integer>
 	<key>NoSyncInstallationId</key>
 	<string>D2E7F106-8BF0-4BEE-AB70-0F317E476773</string>
+	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
+	<true/>
+	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
+	<integer>0</integer>
 	<key>NoSyncPermissionToShowTip</key>
 	<false/>
 	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>

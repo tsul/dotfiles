@@ -34,6 +34,9 @@ colorscheme water
 
 set autoindent
 set backspace=indent,eol,start
+set tabstop=2
+set shiftwidth=2
+set expandtab
 set smarttab
 set nrformats-=octal
 set laststatus=2
@@ -68,6 +71,7 @@ nnoremap <Leader>t :tabedit<CR>
 nnoremap <Leader>sc :SyntasticCheck<CR>
 nnoremap <Leader>st :SyntasticToggleMode<CR>
 nnoremap <Leader>sr :SyntasticReset<CR>
+nnoremap <Leader>g gt<CR>
 
 " Clipboard management
 vmap <Leader>y "+y
@@ -171,13 +175,13 @@ hi User8 ctermfg=8 ctermbg=none
 
 set statusline=\ 
 
-set statusline+=%{LimitPathLength(expand('%f'),60)}\ 
+set statusline+=%{LimitPathLength(expand('%f'),50)}\ 
 set statusline+=%7*
 set statusline+=%(%h%m%r%w\ %)
 set statusline+=(
 set statusline+=%(%{&ft}%)
-set statusline+=%(,\ %{ShowUnlessDefault(len(&fenc)?&fenc:&enc,'utf-8')}%)
-set statusline+=%(,\ %{ShowUnlessDefault(&fileformat,'unix')}%)
+" set statusline+=%(,\ %{ShowUnlessDefault(len(&fenc)?&fenc:&enc,'utf-8')}%)
+" set statusline+=%(,\ %{ShowUnlessDefault(&fileformat,'unix')}%)
 set statusline+=)
 
 set statusline+=%=

@@ -3,3 +3,4 @@
 	email = taylor.sullivan@me.com
 [core]
 	editor = vim
+	excludesfile = ~/.gitignore

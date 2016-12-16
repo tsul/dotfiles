@@ -51,6 +51,7 @@ set hlsearch
 set cursorline
 set mouse=a
 set shortmess+=c
+set undofile
 
 let mapleader="\<Space>"
 

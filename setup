@@ -7,6 +7,7 @@ rm -rf ~/.vim \
        ~/.zpreztorc \
        ~/.zprezto/modules/prompt/functions/prompt_water_setup \
        ~/.gitconfig \
+       ~/.gitignore \
        ~/.config/mpv/mpv.conf
 
 # zsh
@@ -21,7 +22,8 @@ ln -s ~/dotfiles/vim/vimrc ~/.vimrc
 
 # git
 
-ln -s ~/dotfiles/gitconfig ~/.gitconfig
+ln -s ~/dotfiles/git/gitconfig ~/.gitconfig
+ln -s ~/dotfiles/git/gitignore ~/.gitignore
 
 # prezto
 

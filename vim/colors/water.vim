@@ -57,7 +57,7 @@ hi Underlined      ctermfg=4   cterm=underline
 hi Type            ctermfg=4
 hi String          ctermfg=12
 hi Keyword         ctermfg=1
-hi Todo            ctermfg=15  ctermbg=none     cterm=bold
+hi Todo            ctermfg=none  ctermbg=none     cterm=underline
 hi Function        ctermfg=4
 hi Identifier      ctermfg=7   cterm=none
 hi Statement       ctermfg=1
@@ -118,6 +118,7 @@ hi javascriptDOMEventTargetMethod ctermfg=7
 hi javascriptStringMethod ctermfg=7
 hi javascriptBOMHistoryProp ctermfg=none
 hi javascriptBOMNavigatorProp ctermfg=7
+hi javascriptBOMLocationMethod ctermfg=7
 hi javascriptDOMNodeProp ctermfg=7
 hi javascriptDOMElemProp ctermfg=7
 hi javascriptDOMDocProp ctermfg=7

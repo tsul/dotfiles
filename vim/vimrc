@@ -42,7 +42,6 @@ set nrformats-=octal
 set laststatus=2
 set wildmenu
 set scrolloff=5
-set number
 set visualbell
 set ignorecase
 set smartcase
@@ -95,6 +94,9 @@ imap jk <Esc>
 
 set splitbelow
 set splitright
+
+set number
+set relativenumber
 
 ca Ag Ag!
 ca ag Ag!

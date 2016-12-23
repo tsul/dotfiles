@@ -259,3 +259,4 @@ hi zshCommands ctermfg=1
 
 hi cssBraces ctermfg=none
 hi sassMixing ctermfg=7
+hi cssImportant ctermfg=1

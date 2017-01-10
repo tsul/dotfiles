@@ -260,3 +260,9 @@ hi zshCommands ctermfg=1
 hi cssBraces ctermfg=none
 hi sassMixing ctermfg=7
 hi cssImportant ctermfg=1
+
+hi elixirDefine ctermfg=1
+hi elixirModuleDefine ctermfg=1
+hi elixirPrivateDefine ctermfg=1
+hi elixirAtom ctermfg=12
+hi elixirInclude ctermfg=1

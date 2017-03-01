@@ -94,6 +94,7 @@ hi! link xmlEndTag  xmlTag
 hi! link xmlEqual   xmlAttrib
 
 
+hi javascriptGlobalMethod ctermfg=7
 hi javascriptTemplateSubstitution ctermfg=none
 hi javascriptImport ctermfg=1
 hi javascriptImportDef ctermfg=4
@@ -115,6 +116,7 @@ hi javascriptFunctionMethod ctermfg=4
 hi javascriptOpSymbol ctermfg=1
 hi javascriptOpSymbols ctermfg=1
 hi javascriptDOMEventTargetMethod ctermfg=7
+hi javascriptDOMEventProp ctermfg=7
 hi javascriptStringMethod ctermfg=7
 hi javascriptBOMHistoryProp ctermfg=none
 hi javascriptBOMNavigatorProp ctermfg=7
@@ -162,6 +164,7 @@ hi javascriptFileListMethod ctermfg=7
 hi javascriptDOMElemMethod ctermfg=7
 hi javascriptDOMDocMethod ctermfg=7
 hi javascriptFuncComma ctermfg=none
+hi javascriptRegExpMethod ctermfg=7
 
 hi! link markdownHeadingRule        NonText
 hi! link markdownHeadingDelimiter   markdownHeadingRule

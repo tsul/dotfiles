@@ -18,8 +18,6 @@ Plugin 'rking/ag.vim'                           " Grep for things
 Plugin 'Valloric/YouCompleteMe'                 " Autocompletion
 Plugin 'ternjs/tern_for_vim'                    " Javascript code analysis
 Plugin 'kern/vim-es7'                           " Up-to-date (ES6+) syntax
-Plugin 'scrooloose/syntastic'                   " Linting
-" Plugin 'mtscout6/syntastic-local-eslint.vim'    " Use local eslint
 Plugin 'mkitt/tabline.vim'                      " Tab titles with index
 
 call vundle#end()
@@ -51,8 +49,8 @@ set cursorline
 set mouse=a
 set shortmess+=c
 set undofile
-set path+=**
-set noautochdir
+
+autocmd FileType javascript.jsx,javascript setlocal formatprg=prettier\ --stdin\ --bracket-spacing\ --single-quote\ --trailing-comma\ --no-semi
 
 let mapleader="\<Space>"
 
@@ -70,9 +68,6 @@ nnoremap <Leader>r :source ~/.vimrc<CR>
 nnoremap <Leader>e :e ~/.vimrc<CR>
 nnoremap <Leader>c :noh<CR>
 nnoremap <Leader>t :tabedit<CR>
-nnoremap <Leader>sc :SyntasticCheck<CR>
-nnoremap <Leader>st :SyntasticToggleMode<CR>
-nnoremap <Leader>sr :SyntasticReset<CR>
 nnoremap <Leader>g gt<CR>
 
 " Clipboard management
@@ -111,13 +106,6 @@ nmap <Leader>sk :SplitjoinSplit<CR>
 nmap <Leader>sj :SplitjoinJoin<CR>
 
 let g:polyglot_disabled = ['javascript', 'javascript.jsx']
-
-let g:syntastic_always_populate_loc_list = 0
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 0
-let g:syntastic_check_on_wq = 0
-let g:syntastic_javascript_checkers = ['eslint']
-let g:syntastic_mode_map = { "mode": "passive", "active_filetypes": [], "passive_filetypes": [] }
 
 " Matcher stuff
 

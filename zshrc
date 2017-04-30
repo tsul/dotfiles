@@ -20,3 +20,7 @@ alias ll='/usr/local/bin/grc /usr/local/opt/coreutils/libexec/gnubin/ls --color 
 function rtm() {
   git checkout origin/master -- $1
 }
+
+function ytmp3() {
+  youtube-dl --extract-audio --audio-format mp3 $1
+}

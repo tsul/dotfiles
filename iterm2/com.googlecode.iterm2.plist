@@ -520,12 +520,14 @@
 	<string>269 410 1018 447 0 0 1440 878 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>410 365 620 392 0 0 1440 878 </string>
+	<key>NSWindow Frame SessionsPreferences</key>
+	<string>269 126 606 469 0 0 1440 878 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>269 106 796 473 0 0 1440 878 </string>
+	<string>269 160 796 473 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>186 357 570 402 0 0 1440 878 </string>
+	<string>657 97 570 379 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>724 130 570 402 0 0 1440 878 </string>
+	<string>275 221 570 379 0 0 1440 878 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -1926,6 +1928,8 @@
 	<key>ShowBookmarkName</key>
 	<false/>
 	<key>ShowFullScreenTabBar</key>
+	<true/>
+	<key>ShowNewOutputIndicator</key>
 	<false/>
 	<key>StretchTabsToFillBar</key>
 	<true/>
@@ -1939,6 +1943,8 @@
 	<string>/-+\~_.</string>
 	<key>findIgnoreCase_iTerm</key>
 	<true/>
+	<key>findMode_iTerm</key>
+	<integer>0</integer>
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>

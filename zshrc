@@ -24,3 +24,7 @@ function rtm() {
 function ytmp3() {
   youtube-dl --extract-audio --audio-format mp3 $1
 }
+
+function cnl() {
+  perl -pi -e 'chomp if eof' $1
+}

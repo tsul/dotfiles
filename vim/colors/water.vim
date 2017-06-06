@@ -271,4 +271,5 @@ hi elixirDefine ctermfg=1
 hi elixirModuleDefine ctermfg=1
 hi elixirPrivateDefine ctermfg=1
 hi elixirAtom ctermfg=12
+hi elixirStructDefine ctermfg=1
 hi elixirInclude ctermfg=1

@@ -148,6 +148,7 @@ hi javascriptTemplateSubstitution ctermfg=none
 hi javascriptFuncKeyword ctermfg=1
 hi javascriptFuncArg ctermfg=none
 hi javascriptNull ctermfg=12
+hi javascriptNumberStaticMethod ctermfg=7
 hi javascriptBraces ctermfg=none
 hi javascriptBoolean ctermfg=12
 hi javascriptObjectLabel ctermfg=4

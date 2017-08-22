@@ -49,6 +49,8 @@ set cursorline
 set mouse=a
 set shortmess+=c
 set undofile
+set noerrorbells visualbell t_vb=
+autocmd GUIEnter * set visualbell t_vb=
 
 autocmd FileType javascript.jsx,javascript setlocal formatprg=prettier\ --stdin\ --bracket-spacing\ --single-quote\ --trailing-comma\ --no-semi
 

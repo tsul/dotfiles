@@ -4,21 +4,21 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-Plugin 'VundleVim/Vundle.vim'                   " Plugin manager
-Plugin 'ctrlpvim/ctrlp.vim'                     " File finder
-Plugin 'scrooloose/nerdtree'                    " File navigator
-Plugin 'tpope/vim-fugitive'                     " Git integration
-Plugin 'tpope/vim-sleuth'                       " Tab detection
-Plugin 'tpope/vim-commentary'                   " Comment things
-Plugin 'tpope/vim-surround'                     " Surround things
-Plugin 'sheerun/vim-polyglot'                   " Syntax highlighting for hella
-Plugin 'AndrewRadev/splitjoin.vim'              " Split/join one-liners
-Plugin 'godlygeek/tabular'                      " Align things
-Plugin 'rking/ag.vim'                           " Grep for things
-Plugin 'Valloric/YouCompleteMe'                 " Autocompletion
-Plugin 'ternjs/tern_for_vim'                    " Javascript code analysis
-Plugin 'kern/vim-es7'                           " Up-to-date (ES6+) syntax
-Plugin 'mkitt/tabline.vim'                      " Tab titles with index
+Plugin 'VundleVim/Vundle.vim'      " Plugin manager
+Plugin 'ctrlpvim/ctrlp.vim'        " File finder
+Plugin 'scrooloose/nerdtree'       " File navigator
+Plugin 'tpope/vim-fugitive'        " Git integration
+Plugin 'tpope/vim-sleuth'          " Tab detection
+Plugin 'tpope/vim-commentary'      " Comment things
+Plugin 'tpope/vim-surround'        " Surround things
+Plugin 'sheerun/vim-polyglot'      " Syntax highlighting for hella
+Plugin 'AndrewRadev/splitjoin.vim' " Split/join one-liners
+Plugin 'godlygeek/tabular'         " Align things
+Plugin 'rking/ag.vim'              " Grep for things
+Plugin 'Valloric/YouCompleteMe'    " Autocompletion
+Plugin 'ternjs/tern_for_vim'       " Javascript code analysis
+Plugin 'kern/vim-es7'              " Up-to-date (ES6+) syntax
+Plugin 'mkitt/tabline.vim'         " Tab titles with index
 
 call vundle#end()
 
@@ -171,7 +171,7 @@ hi User8 ctermfg=8 ctermbg=none
 
 set statusline=\ 
 
-set statusline+=%{LimitPathLength(expand('%f'),50)}\ 
+set statusline+=%{LimitPathLength(expand('%f'),70)}\ 
 set statusline+=%7*
 set statusline+=%(%h%m%r%w\ %)
 set statusline+=(

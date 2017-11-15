@@ -30,6 +30,9 @@ Plug 'AndrewRadev/splitjoin.vim'
 Plug 'godlygeek/tabular'
 Plug 'tpope/vim-characterize'
 
+" Git
+Plug 'tpope/vim-fugitive'
+
 " Autocomplete
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py --tern-completer' }
 

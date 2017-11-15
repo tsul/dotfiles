@@ -29,6 +29,7 @@ Plug 'tpope/vim-surround'
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'godlygeek/tabular'
 Plug 'tpope/vim-characterize'
+Plug 'Townk/vim-autoclose'
 
 " Git
 Plug 'tpope/vim-fugitive'
@@ -120,6 +121,10 @@ nnoremap k gk
 
 " Use more up-to-date highlighting for js
 let g:polyglot_disabled = ['javascript', 'javascript.jsx']
+
+" Smaller fzf pane
+let g:fzf_layout = { 'down': '~20%' }
+
 
 " === Shortcuts and commands ===
 

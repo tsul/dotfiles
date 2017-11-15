@@ -17,7 +17,9 @@ Plug 'Valloric/YouCompleteMe', { 'do': './install.py --tern-completer' }
 Plug 'marijnh/tern_for_vim', { 'do': 'npm install' }
 Plug 'kern/vim-es7'
 Plug 'mkitt/tabline.vim'
-Plug 'majutsushi/tagbar'
+Plug 'prettier/vim-prettier', {
+  \ 'do': 'yarn install',
+  \ 'for': ['javascript', 'css', 'scss', 'json', 'markdown'] }
 
 call plug#end()
 
@@ -69,6 +71,7 @@ nnoremap <Leader>c :noh<CR>
 nnoremap <Leader>t :tabedit<CR>
 nnoremap <Leader>g gt<CR>
 nnoremap <Leader>s :Find<SPACE>
+nnoremap <Leader>u :Prettier<CR>
 
 " Clipboard management
 vmap <Leader>y "+y

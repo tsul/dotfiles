@@ -17,8 +17,6 @@ alias zrc='vim ~/.zshrc'
 alias vrc='vim ~/.vimrc'
 alias ll='/usr/local/bin/grc /usr/local/opt/coreutils/libexec/gnubin/ls --color -l'
 
-export FZF_DEFAULT_COMMAND='rg --files --hidden --follow --glob "!.git/*"'
-
 function rtm() {
   git checkout origin/master -- $1
 }
@@ -27,8 +25,6 @@ function ytmp3() {
   youtube-dl --extract-audio --audio-format mp3 $1
 }
 
-function cnl() {
-  perl -pi -e 'chomp if eof' $1
-}
+export FZF_DEFAULT_COMMAND='rg --files --hidden --follow --glob "!.git/*"'
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

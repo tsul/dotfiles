@@ -1,25 +1,37 @@
 set nocompatible
 filetype off
 
+" === Plugins ===
+
 call plug#begin('~/.vim/plugged')
 
+" Fuzzy finder
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
-Plug 'sheerun/vim-polyglot'
-Plug 'scrooloose/nerdtree'
-Plug 'tpope/vim-fugitive'
+
+" Syntax parsing/highlighting/formatting
 Plug 'tpope/vim-sleuth'
+Plug 'sheerun/vim-polyglot'
+Plug 'marijnh/tern_for_vim', { 'do': 'npm install' }
+Plug 'kern/vim-es7'
+Plug 'prettier/vim-prettier', {
+  \ 'do': 'yarn install',
+  \ 'for': ['javascript', 'css', 'scss', 'json', 'markdown'] }
+
+" File/buffer navigation
+Plug 'scrooloose/nerdtree'
+Plug 'mkitt/tabline.vim'
+
+" Tab/space detection
+
+" Editing
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'godlygeek/tabular'
+
+" Autocomplete
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py --tern-completer' }
-Plug 'marijnh/tern_for_vim', { 'do': 'npm install' }
-Plug 'kern/vim-es7'
-Plug 'mkitt/tabline.vim'
-Plug 'prettier/vim-prettier', {
-  \ 'do': 'yarn install',
-  \ 'for': ['javascript', 'css', 'scss', 'json', 'markdown'] }
 
 call plug#end()
 
@@ -27,29 +39,73 @@ filetype on
 filetype plugin on
 filetype indent on
 
+" === Configuration ===
+
 syntax on
 set background=dark
 colorscheme water
 
+" Set window split directions
+set splitbelow
+set splitright
+
+" Show line numbers
+set number
+" Show relative line numbers on inactive lines
+set relativenumber
+
+" Capitalize some stuff
+ca find Find
+ca tab Tab
+
+" Auto-indent new lines
 set autoindent
+
+" Backspace should delete over these special chars
 set backspace=indent,eol,start
-set tabstop=2
-set shiftwidth=2
+
+" Use spaces for indentation (2 per level)
 set expandtab
-set smarttab
+" TAB key
+set tabstop=2
+" Tab commands (>>, <<, etc.)
+set shiftwidth=2
+
+" Don’t parse 0-led numbers as octal
 set nrformats-=octal
+
+" Always show statusline
 set laststatus=2
+
+" Command-line completion
 set wildmenu
+
+" Offset scroll position 5 lines from top/bottom
 set scrolloff=5
-set visualbell
+
+" Ignore case in searches…
 set ignorecase
+" …unless capitals are used in the query.
 set smartcase
+" Search incrementally
 set incsearch
+" Highlight search terms
 set hlsearch
+
+" Highlight the line where the cursor is
 set cursorline
+
+" Enable mouse
 set mouse=a
+
+" Silence an annoying YouCompleteMe-related message (still necessary?)
 set shortmess+=c
+
+" Maintain a persistent undo file
 set undofile
+
+" Silence terminal bells
+set visualbell
 set noerrorbells visualbell t_vb=
 autocmd GUIEnter * set visualbell t_vb=
 
@@ -59,7 +115,12 @@ let mapleader="\<Space>"
 nnoremap j gj
 nnoremap k gk
 
-" Shortcuts
+" Use more up-to-date highlighting for js
+let g:polyglot_disabled = ['javascript', 'javascript.jsx']
+
+" === Shortcuts and commands ===
+
+" Most-used shortcuts
 nnoremap <Leader>o :Files<CR>
 nnoremap <Leader>w :w<CR>
 nnoremap <Leader>q :q<CR>
@@ -72,6 +133,8 @@ nnoremap <Leader>t :tabedit<CR>
 nnoremap <Leader>g gt<CR>
 nnoremap <Leader>s :Find<SPACE>
 nnoremap <Leader>u :Prettier<CR>
+nmap <Leader>sk :SplitjoinSplit<CR>
+nmap <Leader>sj :SplitjoinJoin<CR>
 
 " Clipboard management
 vmap <Leader>y "+y
@@ -90,26 +153,15 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
+" Home-row esc
 imap jk <Esc>
 
-set splitbelow
-set splitright
-
-set number
-set relativenumber
-
-ca find Find
-ca tab Tab
-
-nmap <Leader>sk :SplitjoinSplit<CR>
-nmap <Leader>sj :SplitjoinJoin<CR>
-
-let g:polyglot_disabled = ['javascript', 'javascript.jsx']
-
+" Fancy :Find command
 command! -bang -nargs=* Find call fzf#vim#grep('rg --column --line-number --no-heading --fixed-strings --ignore-case --hidden --follow --glob "!.git/*" --color "always" '.shellescape(<q-args>).'| tr -d "\017"', 1, <bang>0)
 
-" Helper funcs for statusline
+" === Helper funcs ===
 
+" Returns the id for syntax highlighting for the object under the cursor
 function! HighlightIdUnderCursor()
   let id = synIDattr(synID(line('.'), col('.'), 1), 'name')
 
@@ -120,6 +172,7 @@ function! HighlightIdUnderCursor()
   return ''
 endfunction
 
+" Shorten a `path` if it exceeds `maxLength`
 function! LimitPathLength(path, maxlength)
   if len(a:path) > a:maxlength
     return pathshorten(a:path)
@@ -128,6 +181,8 @@ function! LimitPathLength(path, maxlength)
   return a:path
 endfunction
 
+" Returns `text` if it varies from `default`; otherwise returns an empty
+" string
 function! ShowUnlessDefault(text, default)
   if a:text == a:default
     return ''
@@ -135,6 +190,8 @@ function! ShowUnlessDefault(text, default)
 
   return text
 endfunction
+
+" === Statusline ===
 
 hi User1 ctermfg=1 ctermbg=none
 hi User7 ctermfg=7 ctermbg=none
@@ -147,8 +204,8 @@ set statusline+=%7*
 set statusline+=%(%h%m%r%w\ %)
 set statusline+=(
 set statusline+=%(%{&ft}%)
-" set statusline+=%(,\ %{ShowUnlessDefault(len(&fenc)?&fenc:&enc,'utf-8')}%)
-" set statusline+=%(,\ %{ShowUnlessDefault(&fileformat,'unix')}%)
+set statusline+=%(,\ %{ShowUnlessDefault(len(&fenc)?&fenc:&enc,'utf-8')}%)
+set statusline+=%(,\ %{ShowUnlessDefault(&fileformat,'unix')}%)
 set statusline+=)
 
 set statusline+=%=

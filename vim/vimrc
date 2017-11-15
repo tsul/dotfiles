@@ -21,14 +21,14 @@ Plug 'prettier/vim-prettier', {
 " File/buffer navigation
 Plug 'scrooloose/nerdtree'
 Plug 'mkitt/tabline.vim'
-
-" Tab/space detection
+Plug 'okcompute/vim-javascript-motions'
 
 " Editing
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'godlygeek/tabular'
+Plug 'tpope/vim-characterize'
 
 " Autocomplete
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py --tern-completer' }

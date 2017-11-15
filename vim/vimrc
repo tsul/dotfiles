@@ -1,26 +1,23 @@
 set nocompatible
 filetype off
 
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+call plug#begin('~/.vim/plugged')
 
-Plugin 'VundleVim/Vundle.vim'      " Plugin manager
-Plugin 'ctrlpvim/ctrlp.vim'        " File finder
-Plugin 'scrooloose/nerdtree'       " File navigator
-Plugin 'tpope/vim-fugitive'        " Git integration
-Plugin 'tpope/vim-sleuth'          " Tab detection
-Plugin 'tpope/vim-commentary'      " Comment things
-Plugin 'tpope/vim-surround'        " Surround things
-Plugin 'sheerun/vim-polyglot'      " Syntax highlighting for hella
-Plugin 'AndrewRadev/splitjoin.vim' " Split/join one-liners
-Plugin 'godlygeek/tabular'         " Align things
-Plugin 'rking/ag.vim'              " Grep for things
-Plugin 'Valloric/YouCompleteMe'    " Autocompletion
-Plugin 'ternjs/tern_for_vim'       " Javascript code analysis
-Plugin 'kern/vim-es7'              " Up-to-date (ES6+) syntax
-Plugin 'mkitt/tabline.vim'         " Tab titles with index
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+Plug 'scrooloose/nerdtree'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-sleuth'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-surround'
+Plug 'AndrewRadev/splitjoin.vim'
+Plug 'godlygeek/tabular'
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py --tern-completer' }
+Plug 'marijnh/tern_for_vim', { 'do': 'npm install' }
+Plug 'kern/vim-es7'
+Plug 'mkitt/tabline.vim'
 
-call vundle#end()
+call plug#end()
 
 filetype on
 filetype plugin on
@@ -52,8 +49,6 @@ set undofile
 set noerrorbells visualbell t_vb=
 autocmd GUIEnter * set visualbell t_vb=
 
-autocmd FileType javascript.jsx,javascript setlocal formatprg=prettier\ --stdin\ --bracket-spacing\ --single-quote\ --trailing-comma\ --no-semi
-
 let mapleader="\<Space>"
 
 " Move within screen lines
@@ -61,7 +56,7 @@ nnoremap j gj
 nnoremap k gk
 
 " Shortcuts
-nnoremap <Leader>o :CtrlP<CR>
+nnoremap <Leader>o :Files<CR>
 nnoremap <Leader>w :w<CR>
 nnoremap <Leader>q :q<CR>
 nnoremap <Leader>n :NERDTree<CR>
@@ -97,11 +92,7 @@ set splitright
 set number
 set relativenumber
 
-ca Ag Ag!
-ca ag Ag!
-let g:ag_highlight=1
-let g:ag_qhandler="botright copen 5"
-
+ca find Find
 ca tab Tab
 
 nmap <Leader>sk :SplitjoinSplit<CR>
@@ -109,33 +100,7 @@ nmap <Leader>sj :SplitjoinJoin<CR>
 
 let g:polyglot_disabled = ['javascript', 'javascript.jsx']
 
-" Matcher stuff
-
-let g:path_to_matcher = "/usr/local/bin/matcher"
-let g:ctrlp_user_command = ['.git/', 'cd %s && git ls-files . -co --exclude-standard']
-let g:ctrlp_match_func = { 'match': 'GoodMatch' }
-let g:ctrlp_working_path_mode = ''
-
-function! GoodMatch(items, str, limit, mmode, ispath, crfile, regex)
-  " Create a cache file if not yet exists
-  let cachefile = ctrlp#utils#cachedir().'/matcher.cache'
-  if !( filereadable(cachefile) && a:items == readfile(cachefile) )
-    call writefile(a:items, cachefile)
-  endif
-  if !filereadable(cachefile)
-    return []
-  endif
-
-  " a:mmode is currently ignored. In the future, we should probably do
-  " something about that. the matcher behaves like "full-line".
-  let cmd = g:path_to_matcher.' --limit '.a:limit.' --manifest '.cachefile.' '
-  if !( exists('g:ctrlp_dotfiles') && g:ctrlp_dotfiles )
-    let cmd = cmd.'--no-dotfiles '
-  endif
-  let cmd = cmd.a:str
-
-  return split(system(cmd), "\n")
-endfunction
+command! -bang -nargs=* Find call fzf#vim#grep('rg --column --line-number --no-heading --fixed-strings --ignore-case --hidden --follow --glob "!.git/*" --color "always" '.shellescape(<q-args>).'| tr -d "\017"', 1, <bang>0)
 
 " Helper funcs for statusline
 

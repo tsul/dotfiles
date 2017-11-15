@@ -6,7 +6,7 @@ export VISUAL='vim'
 
 [[ -f ~/.zprezto/init.zsh ]] && source ~/.zprezto/init.zsh
 
-export PATH=$HOME/bin:/usr/local/bin:/usr/local/sbin:$(yarn global bin):$PATH
+export PATH=$HOME/.cargo/bin:$HOME/bin:/usr/local/bin:/usr/local/sbin:$(yarn global bin):$PATH
 
 source /usr/local/share/chruby/chruby.sh
 source /usr/local/share/chruby/auto.sh
@@ -16,6 +16,8 @@ alias src='source ~/.zshrc'
 alias zrc='vim ~/.zshrc'
 alias vrc='vim ~/.vimrc'
 alias ll='/usr/local/bin/grc /usr/local/opt/coreutils/libexec/gnubin/ls --color -l'
+
+export FZF_DEFAULT_COMMAND='rg --files --hidden --follow --glob "!.git/*"'
 
 function rtm() {
   git checkout origin/master -- $1
@@ -28,3 +30,5 @@ function ytmp3() {
 function cnl() {
   perl -pi -e 'chomp if eof' $1
 }
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

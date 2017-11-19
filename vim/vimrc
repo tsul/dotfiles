@@ -29,7 +29,6 @@ Plug 'tpope/vim-surround'
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'godlygeek/tabular'
 Plug 'tpope/vim-characterize'
-Plug 'Townk/vim-autoclose'
 
 " Git
 Plug 'tpope/vim-fugitive'

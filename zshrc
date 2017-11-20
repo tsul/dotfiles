@@ -16,6 +16,7 @@ alias src='source ~/.zshrc'
 alias zrc='vim ~/.zshrc'
 alias vrc='vim ~/.vimrc'
 alias ll='/usr/local/bin/grc /usr/local/opt/coreutils/libexec/gnubin/ls --color -l'
+alias update='brew upgrade && zprezto-update'
 
 function rtm() {
   git checkout origin/master -- $1

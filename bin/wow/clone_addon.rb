@@ -62,7 +62,7 @@ def run(use_latest_release:)
       puts "No releases found for #{ repo_name }. Using HEAD."
     end
   else
-    puts "Using HEAD."
+    puts 'Using HEAD.'
   end
 end
 
@@ -75,7 +75,7 @@ option_parser = OptionParser.new do |parser|
     "Usage: #{ __FILE__ } [repo path (e.g., kxseven/Clique)] [options]"
   )
 
-  parser.on('-r', '--release', 'Use latest release') do |v|
+  parser.on('-l', '--latest', 'Use latest release') do |v|
     options[:use_latest_release] = true
   end
 
@@ -87,4 +87,4 @@ end
 
 option_parser.parse! ARGV
 
-run(options)
+run options

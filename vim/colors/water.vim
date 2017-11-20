@@ -199,6 +199,7 @@ hi rubyException ctermfg=1
 hi rubyAttribute ctermfg=7
 hi rubyTodo ctermfg=7 cterm=bold
 hi rubyConstant ctermfg=4
+hi! link rubySharpBang Comment
 hi rspecBeforeAndAfter ctermfg=1
 
 hi gitCommitBranch               ctermfg=3

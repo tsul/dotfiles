@@ -139,7 +139,9 @@ nnoremap <Leader>c :noh<CR>
 nnoremap <Leader>t :tabedit<CR>
 nnoremap <Leader>g gt<CR>
 nnoremap <Leader>s :Find<SPACE>
-nnoremap <Leader>u :Prettier<CR>
+nnoremap <Leader>sw :execute "Find " . expand("<cWORD>")<CR>
+nnoremap <Leader>uj :Prettier<CR>
+nnoremap <Leader>uc :CSScomb<CR>
 nmap <Leader>sk :SplitjoinSplit<CR>
 nmap <Leader>sj :SplitjoinJoin<CR>
 
@@ -211,7 +213,7 @@ set statusline+=%7*
 set statusline+=%(%h%m%r%w\ %)
 set statusline+=(
 set statusline+=%(%{&ft}%)
-set statusline+=%(,\ %{ShowUnlessDefault(len(&fenc)?&fenc:&enc,'utf-8')}%)
+" set statusline+=%(,\ %{ShowUnlessDefault(len(&fenc)?&fenc:&enc,'utf-8')}%)
 set statusline+=%(,\ %{ShowUnlessDefault(&fileformat,'unix')}%)
 set statusline+=)
 

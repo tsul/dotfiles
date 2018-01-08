@@ -107,6 +107,9 @@ set shortmess+=c
 " Maintain a persistent undo file
 set undofile
 
+" Smarter formatting for joined lines
+set formatoptions+=j
+
 " Silence terminal bells
 set visualbell
 set noerrorbells visualbell t_vb=
@@ -123,7 +126,6 @@ let g:polyglot_disabled = ['javascript', 'javascript.jsx']
 
 " Smaller fzf pane
 let g:fzf_layout = { 'down': '~20%' }
-
 
 " === Shortcuts and commands ===
 

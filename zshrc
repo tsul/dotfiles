@@ -11,6 +11,8 @@ export PATH=$HOME/.cargo/bin:$HOME/bin:/usr/local/bin:/usr/local/sbin:$(yarn glo
 source /usr/local/share/chruby/chruby.sh
 source /usr/local/share/chruby/auto.sh
 
+source ~/.env
+
 alias dev='cd ~/Development'
 alias src='source ~/.zshrc'
 alias zrc='vim ~/.zshrc'

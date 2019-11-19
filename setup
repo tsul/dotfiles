@@ -8,7 +8,8 @@ rm -rf ~/.vim \
        ~/.zprezto/modules/prompt/functions/prompt_water_setup \
        ~/.gitconfig \
        ~/.gitignore \
-       ~/.config/mpv/mpv.conf
+       ~/.config/mpv/mpv.conf \
+       ~/.spacemacs
 
 # zsh
 
@@ -33,3 +34,6 @@ ln -s ~/dotfiles/prezto/prompt_water_setup ~/.zprezto/modules/prompt/functions/p
 # mpv
 
 ln -s ~/dotfiles/mpv.conf ~/.config/mpv/mpv.conf
+
+# spacemacs
+ln -s ~/dotfiles/spacemacs/spacemacs ~/.spacemacs

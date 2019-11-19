@@ -216,7 +216,7 @@ set statusline+=%(%h%m%r%w\ %)
 set statusline+=(
 set statusline+=%(%{&ft}%)
 " set statusline+=%(,\ %{ShowUnlessDefault(len(&fenc)?&fenc:&enc,'utf-8')}%)
-set statusline+=%(,\ %{ShowUnlessDefault(&fileformat,'unix')}%)
+" set statusline+=%(,\ %{ShowUnlessDefault(&fileformat,'unix')}%)
 set statusline+=)
 
 set statusline+=%=

@@ -4,14 +4,14 @@ export LANG=en_US.UTF-8
 export EDITOR='vim'
 export VISUAL='vim'
 
-[[ -f ~/.zprezto/init.zsh ]] && source ~/.zprezto/init.zsh
+source ~/.env
 
-export PATH=$HOME/.cargo/bin:$HOME/bin:/usr/local/bin:/usr/local/sbin:$(yarn global bin):$PATH
+[[ -f ~/.zprezto/init.zsh ]] && source ~/.zprezto/init.zsh
 
 source /usr/local/share/chruby/chruby.sh
 source /usr/local/share/chruby/auto.sh
 
-source ~/.env
+export PATH=$HOME/.cargo/bin:$HOME/bin:/usr/local/bin:/usr/local/sbin:$(yarn global bin):$PATH
 
 alias dev='cd ~/Development'
 alias src='source ~/.zshrc'
@@ -31,3 +31,7 @@ function ytmp3() {
 export FZF_DEFAULT_COMMAND='rg --files --hidden --follow --glob "!.git/*"'
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+function cheat() {
+  curl cht.sh/$1
+}

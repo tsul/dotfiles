@@ -325,6 +325,8 @@ explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
   (setq-default mac-option-modifier nil)
 
+  (add-to-list 'exec-path "/usr/local/bin/")
+
   (add-to-list 'default-frame-alist '(ns-transparent-titlebar . t))
   (add-to-list 'default-frame-alist '(ns-appearance . dark))
 

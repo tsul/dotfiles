@@ -11,3 +11,4 @@ yabai -m config window_shadow float
 yabai -m rule --add app="^System Preferences$" manage=off
 yabai -m rule --add app="^Music$" manage=off
 yabai -m rule --add app="^Installer$" manage=off
+yabai -m rule --add app="^NordVPN$" manage=off

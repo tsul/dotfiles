@@ -64,7 +64,6 @@
       "commands": ["editor.action.formatDocument"]
     }
   ],
-  "editor.fontSize": 14,
   "editor.fontFamily": "'Fantasque Sans Mono', Menlo, Monaco, 'Courier New', monospace",
   "editor.tabSize": 2,
   "editor.wordWrapColumn": 100,
@@ -194,5 +193,18 @@
   "explorer.openEditors.visible": 0,
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.suggestSelection": "first",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "editor.fontSize": 14,
+  "workbench.colorCustomizations": {
+    "editor.foreground": "#bfbfbf",
+    "editor.background": "#282a2e",
+    "editor.selectionBackground": "#5c4c79",
+    "editor.selectionForeground": "#b2b2b2"
   }
 }

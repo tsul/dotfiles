@@ -8,10 +8,11 @@ source ~/.env
 
 [[ -f ~/.zprezto/init.zsh ]] && source ~/.zprezto/init.zsh
 
-source /usr/local/share/chruby/chruby.sh
-source /usr/local/share/chruby/auto.sh
+source /opt/homebrew/share/chruby/chruby.sh
+source /opt/homebrew/share/chruby/auto.sh
 
-export PATH=$HOME/.cargo/bin:$HOME/bin:/usr/local/bin:/usr/local/sbin:$(yarn global bin):$PATH
+export PATH=$HOME/.cargo/bin:$HOME/bin:/usr/local/bin:/opt/homebrew/bin:/usr/local/bin:/usr/local/sbin:$(yarn global bin):$PATH
+export LIBRARY_PATH=$LIBRARY_PATH:/opt/homebrew/opt/openssl/lib
 
 alias dev='cd ~/Development'
 alias src='source ~/.zshrc'
@@ -19,6 +20,7 @@ alias zrc='vim ~/.zshrc'
 alias vrc='vim ~/.vimrc'
 alias ll='/usr/local/bin/grc /usr/local/opt/coreutils/libexec/gnubin/ls --color -l'
 alias update='brew upgrade && zprezto-update'
+alias ibrew='arch -x86_64 /usr/local/bin/brew'
 
 function rtm() {
   git checkout origin/master -- $1
